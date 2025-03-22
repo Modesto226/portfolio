@@ -74,6 +74,11 @@ nav a{
 nav li :hover a{
     padding: 15px .30px 20px 30px;
 }
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }  
 @media screen and (max-width: 700px) {
     header{
         height: 50px;
