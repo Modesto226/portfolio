@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style1.css">
+    <title>Contact - ILBOUDO MODESTE</title>
+</head>
+<body>
+    <nav>
+        <h1><span class="nom">ILBOUDO</span> <span class="prenom">Modeste</span></h1>
+        <ul>
+            <li><a href="index1.html">À propos</a></li>
+            <li><a href="projet.html">Mes Projets</a></li>
+            <li><a href="competence.html">Mes Compétences</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="informations-contact">
+        <h2>Mes Informations de Contact</h2>
+        <div class="contact-info">
+            <p><strong>Email :</strong> <a href="mailto:modesto.ilboudo@gmail.com">modesto.ilboudo@gmail.com</a></p>
+            <p><strong>Téléphone :</strong> <a href="tel:+1234567890">+123 456 7890</a></p>
+            <p><strong>Adresse :</strong> Ouagadougou, Burkina Faso</p>
+        </div>
+        <div class="reseaux-sociaux">
+            <h3>Mes Réseaux Sociaux</h3>
+            <ul>
+                <li><a href="https://linkedin.com/in/modeste-ilboudo" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/modeste-ilboudo" target="_blank">GitHub</a></li>
+                <li><a href="https://twitter.com/modeste_ilboudo" target="_blank">Twitter</a></li>
+                <li><a href="https://facebook.com/modeste.ilboudo" target="_blank">Facebook</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="formulaire-contact">
+        <h2>Formulaire de Contact</h2>
+        <form id="contact-form" action="https://formspree.io/f/xeoaebkk" method="post">
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+            <input type="email" id="email" name="email" placeholder="Votre email" required>
+            <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+        <p id="form-message"></p> <!-- Message de validation -->
+    </section>
+
+    <footer>
+        <p>
+            <span class="auteur">
+                Designed by ILBOUDO MODESTE with HTML, CSS, JS.
+            </span>
+            <span class="droit">
+                Tous droits réservés
+            </span>
+        </p>
+    </footer>
+    <button id="back-to-top" title="Remonter en haut">↑</button>
+    <script src="script.js"></script>
+</body>
+</html>

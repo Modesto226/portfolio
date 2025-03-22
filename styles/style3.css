@@ -1,0 +1,378 @@
+
+/* Reset des styles par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style de base pour le body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Style pour la navigation */
+nav {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 20px; 
+    background-color: #000; 
+    color: #fff;
+}
+
+/* Style pour le titre */
+nav h1 {
+    margin: 0;
+    font-size: 1.5em; 
+}
+
+nav h1 .nom {
+    color: #fff; 
+}
+
+nav h1 .prenom {
+    color: #00b8cc 
+}
+
+/* Style pour la liste du menu */
+nav ul {
+    display: flex; 
+    list-style: none;
+    margin: 0; 
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px; 
+}
+
+nav ul li a {
+    color: #fff; 
+    text-decoration: none; 
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00b8cc; 
+}
+
+/* Style pour les sections */
+section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+/* Style pour la section accueil */
+#accueil {
+    padding: 40px 20px;
+    background-color: #f0f0f0;
+}
+
+.presentation {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.texte {
+    flex: 1; 
+    padding-right: 40px; 
+}
+
+.image {
+    flex-shrink: 0; 
+}
+
+.image img {
+    max-width: 100%; 
+    height: 400px;
+}
+
+/* Style pour le bouton */
+.btn {
+    display: inline-block;
+    background-color: #00b8cc;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .presentation {
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .texte {
+        padding-right: 0; 
+        margin-bottom: 20px; 
+    }
+
+    .image img {
+        max-width: 100%; 
+    }
+}
+
+.btn:hover {
+    background-color: #00b8cc;
+}
+
+/* Style pour la section À propos */
+#apropos {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.apropos-content {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.apropos-texte {
+    flex: 1; 
+    padding-right: 40px; 
+}
+
+.apropos-image {
+    flex-shrink: 0; 
+}
+
+.apropos-image img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 50%; 
+    border-color: #00b8cc;
+    border-style: ridge;
+  
+}
+
+/* Style pour le bouton */
+.btn {
+    display: inline-block;
+    background-color: #00b8cc;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00b8cc;
+}
+
+/* Style pour les projets */
+.projets-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.projet {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.projet h3 {
+    margin-bottom: 10px;
+}
+
+.projet .tags {
+    margin: 10px 0;
+}
+
+.projet .tags span {
+    background-color: #00b8cc;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.projet .btn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.projet .btn:hover {
+    background-color: #333;
+}
+
+/* Style pour la section Compétences */
+#competences {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+#competences h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+.skills-container {
+    display: flex; 
+    justify-content: space-between; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.soft-skills, .hard-skills {
+    flex: 1; 
+    padding: 0 20px; 
+}
+
+.skill {
+    margin-bottom: 20px; 
+}
+
+.skill h4 {
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    background-color: #ddd;
+    border-radius: 5px;
+    height: 10px;
+    overflow: hidden;
+}
+
+.progress-bar .progress {
+    background-color: #00b8cc;
+    height: 100%;
+}
+
+/* Style pour le bouton "Voir" */
+.voir-competences {
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+.voir-competences .btn {
+    background-color: #00b8cc; 
+    color: #000; 
+    padding: 10px 20px; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
+}
+
+.voir-competences .btn:hover {
+    background-color: #00b8cc; 
+}
+
+/* Style pour le contact */
+#contact {
+    text-align: center;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contact input, #contact textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#contact button {
+    background-color: #00b8cc;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #00b8cc;
+}
+
+
+
+footer {
+    background-color: #000; 
+    color: #fff; 
+    text-align: center; 
+    padding: 20px; 
+    position: fixed; 
+    left: 0;
+    bottom: 0;
+    width: 100%; 
+    z-index: 1000;
+}
+body {
+    margin-bottom: 80px;
+}
+
+footer p {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin: 0; 
+}
+
+footer span {
+    color: #00b8cc;
+    text-decoration: none;
+}
+
+footer span:hover {
+    text-decoration: underline;
+}
+
+/* Style pour le bouton "Remonter en haut" */
+#back-to-top {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px;
+    z-index: 1000; 
+    background-color: #00b8cc; 
+    color: #000; 
+    border: none; 
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+    font-size: 24px; 
+    cursor: pointer; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease; 
+}
+
+#back-to-top:hover {
+    background-color: #00b8cc; 
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style2.css">
+    <title>Portfolio - ILBOUDO MODESTE</title>
+</head>
+<body>
+    <nav>
+        <h1><span class="nom">ILBOUDO</span> <span class="prenom">Modeste</span></h1>
+        <ul>
+            <li><a href="index1.html">À propos</a></li>
+            <li><a href="#projets">Mes Projets</a></li>
+            <li><a href="competence.html">Mes Compétences</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="wordpress">
+        <h2>Projets WordPress</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom du projet</th>
+                    <th>Description</th>
+                    <th>Lien</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Site E-commerce</td>
+                    <td>Création d'un site e-commerce avec WooCommerce</td>
+                    <td><a href="https://www.sougou.bf/wordpress/" target="_blank">Visiter le site</a></td>
+                </tr>
+                <tr>
+                    <td>Site E-commerce</td>
+                    <td>Création d'un site e-commerce</td>
+                    <td><a href="http://coquin.wuaze.com/" target="_blank">Visiter le site</a></td>
+                </tr>
+                <tr>
+                    <td>Landing page</td>
+                    <td>Conception d'une landing page avec Elementor</td>
+                    <td><a href="https://waridojo.com/cristal-generators/" target="_blank">Visiter le site</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="developpement-web">
+        <h2>Projets Développement Web</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom du projet</th>
+                    <th>Description</th>
+                    <th>Lien</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Portfolio Personnel</td>
+                    <td>Création d'un portfolio en HTML, CSS et JavaScript</td>
+                    <td><a href="https://exemple-portfolio.com" target="_blank">Visiter le site</a></td>
+                </tr>
+                <tr>
+                    <td>Application de Gestion</td>
+                    <td>Développement d'une application de gestion en JavaScript</td>
+                    <td><a href="https://exemple-gestion.com" target="_blank">Visiter le site</a></td>
+                </tr>
+                <tr>
+                    <td>Site de Réservation</td>
+                    <td>Conception d'un site de réservation en ligne</td>
+                    <td><a href="https://exemple-reservation.com" target="_blank">Visiter le site</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="design-infographie">
+        <h2>Design et Infographie</h2>
+        <div class="galerie">
+            <div class="galerie-item">
+                <img src="image/design1.jpg" alt="Design 1">
+                <p>Conception de logo</p>
+            </div>
+            <div class="galerie-item">
+                <img src="image/design2.jpg" alt="Design 2">
+                <p>Affiche publicitaire</p>
+            </div>
+            <div class="galerie-item">
+                <img src="image/design3.jpg" alt="Design 3">
+                <p>Illustration vectorielle</p>
+            </div>
+            <div class="galerie-item">
+                <img src="image/design4.jpg" alt="Design 4">
+                <p>Maquette web</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <h2>Vous avez un projet en tête?</h2>
+        <h2>Contactez-moi</h2>
+        <form id="contact-form" action="https://formspree.io/f/xeoaebkk" method="post">
+            <input type="text" id="name" placeholder="Votre nom" required>
+            <input type="email" id="email" placeholder="Votre email" required>
+            <textarea id="message" placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+        <p id="form-message"></p> <!-- Message de validation -->
+    </section>
+    
+
+    <footer>
+        <p>
+            <span class="auteur">
+                Designed by ILBOUDO MODESTE with HTML, CSS, JS.
+            </span>
+            <span class="droit">
+                Tous droits réservés
+            </span>
+        </p>
+    </footer>
+    <button id="back-to-top" title="Remonter en haut">↑</button>
+    <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

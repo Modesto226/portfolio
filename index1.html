@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style3.css">
+    <title>Portfolio - ILBOUDO MODESTE</title>
+</head>
+<body>
+    <nav>
+        <h1><span class="nom">ILBOUDO</span> <span class="prenom">Modeste</span></h1>
+        <ul>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#projets">Mes Projets</a></li>
+            <li><a href="#competences">Mes Compétences</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="accueil">
+        <div class="presentation">
+            <div class="texte">
+                <h2>Hello, Bienvenu à toi sur mon Portfolio ! <br>
+                    Je suis Modeste, Développeur en devenir passionné par le web et le design !
+                </h2>
+                <a href="#projets" class="btn">Voir mes projets</a>
+            </div>
+            <div class="image">
+                <img src="image/developpeur.png" alt="image d'une personne en train de coder">
+            </div>
+        </div>
+    </section>
+
+    <section id="apropos">
+        <h2>À propos</h2>
+        <div class="apropos-content">
+            <div class="apropos-texte">
+                <p>Je m’appelle ILBOUDO Modeste, passionné par le numérique et 
+                    la création de sites web modernes et interactifs.</p>
+                <p>Je suis actuellement étudiant en développement web, et je cherche à améliorer mes compétences en JavaScript, HTML et CSS.</p>
+                <p>J’adore transformer mes idées en projets concrets et apprendre les nouvelles technologies.</p>
+                <a href="pdf/CV-ILBOUDO_MODESTE.pdf" class="btn">Télécharger mon CV</a>
+            </div>
+            <div class="apropos-image">
+                <img src="image/modes.png" alt="ma photo de profil">
+            </div>
+        </div>
+    </section>
+
+    <section id="projets">
+        <h2>Mes Projets</h2>
+        <div class="projets-grid">
+            <div class="projet">
+                <h3>WordPress</h3>
+                <p>Développement de projets basés sur le CMS WordPress</p>
+                <div class="tags">
+                    <span>#WordPress</span>
+                    <span>#Woocommerce</span>
+                    <span>#Elementor</span>
+                </div>
+                <a href="projet.html#wordpress" class="btn">Voir</a>
+            </div>
+            <div class="projet">
+                <h3>Développement web</h3>
+                <p>Développement de site web dynamiques et responsifs</p>
+                <div class="tags">
+                    <span>#html</span>
+                    <span>#css</span>
+                    <span>#javascript</span>
+                </div>
+                <a href="projet.html#developpement-web" class="btn">Voir</a>
+            </div>
+            <div class="projet">
+                <h3>Design et infographie</h3>
+                <p>Conception de contenus visuels</p>
+                <div class="tags">
+                    <span>#Adobe Illustrator</span>
+                    <span>#Adobe Photshop</span>
+                    <span>#Canvas</span>
+                </div>
+                <a href="projet.html#design-infographie" class="btn">Voir</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="competences">
+        <h2>Mes Compétences</h2>
+        <div class="skills-container">
+            <div class="soft-skills">
+                <h3>Mes soft skills</h3>
+                <div class="skill">
+                    <h4>HTML</h4>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h4>CSS</h4>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h4>JavaScript</h4>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h4>VS Code</h4>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hard-skills">
+                <h3>Mes hard skills</h3>
+                <div class="skill">
+                    <h4>HTML</h4>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h4>CSS</h4>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h4>JavaScript</h4>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h4>VS Code</h4>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Ajouter le bouton "Voir" ici -->
+        <div class="voir-competences">
+            <a href="competence.html" class="btn">Voir plus de détails</a>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Vous avez un projet en tête?</h2>
+        <h2>Contactez-moi</h2>
+        <form id="contact-form" action="https://formspree.io/f/xeoaebkk" method="post">
+            <input type="text" id="name" placeholder="Votre nom" required>
+            <input type="email" id="email" placeholder="Votre email" required>
+            <textarea id="message" placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+        <p id="form-message"></p> <!-- Message de validation -->
+    </section>
+    
+
+    <footer>
+        <p>
+            <span class="auteur">
+                Designed by ILBOUDO MODESTE with HTML, CSS, JS.
+            </span>
+            <span class="droit">
+                Tous droits réservés
+            </span>
+        </p>
+    </footer>
+    <button id="back-to-top" title="Remonter en haut">↑</button>
+    <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
