@@ -1,4 +1,3 @@
-
 /* Reset des styles par défaut */
 * {
     margin: 0;
@@ -12,59 +11,65 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    margin-bottom: 80px; /* Espace pour le footer fixe */
 }
 
+/* Conteneur principal */
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  }  
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
 /* Style pour la navigation */
 nav {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 10px 20px; 
-    background-color: #000; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
     color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* Style pour le titre */
 nav h1 {
     margin: 0;
-    font-size: 1.5em; 
+    font-size: 1.5em;
 }
 
 nav h1 .nom {
-    color: #fff; 
+    color: #fff;
 }
 
 nav h1 .prenom {
-    color: #00b8cc 
+    color: #00b8cc;
 }
 
-/* Style pour la liste du menu */
 nav ul {
-    display: flex; 
+    display: flex;
     list-style: none;
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
 
 nav ul li {
-    margin-left: 20px; 
+    margin-left: 20px;
 }
 
 nav ul li a {
-    color: #fff; 
-    text-decoration: none; 
+    color: #fff;
+    text-decoration: none;
     padding: 10px 15px;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #00b8cc; 
+    color: #00b8cc;
 }
 
 /* Style pour les sections */
@@ -82,35 +87,56 @@ section h2 {
     font-size: 2em;
 }
 
-/* Style pour la section accueil */
+/* Section Accueil */
+/* Section Accueil */
 #accueil {
     padding: 40px 20px;
     background-color: #f0f0f0;
 }
 
 .presentation {
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    max-width: 1200px; 
-    margin: 0 auto; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-direction: row; /* Par défaut, alignement horizontal */
 }
 
 .texte {
-    flex: 1; 
-    padding-right: 40px; 
+    flex: 1;
+    padding-right: 40px;
+    text-align: left;
 }
 
 .image {
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
 .image img {
-    max-width: 100%; 
+    max-width: 100%;
     height: 400px;
+    border-radius: 8px;
 }
 
-/* Style pour le bouton */
+/* Responsive pour les écrans mobiles */
+@media (max-width: 768px) {
+    .presentation {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .texte {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .image img {
+        max-width: 100%;
+    }
+}
+
+/* Bouton */
 .btn {
     display: inline-block;
     background-color: #00b8cc;
@@ -121,77 +147,44 @@ section h2 {
     transition: background-color 0.3s ease;
 }
 
-@media (max-width: 768px) {
-    .presentation {
-        flex-direction: column; 
-        text-align: center; 
-    }
-
-    .texte {
-        padding-right: 0; 
-        margin-bottom: 20px; 
-    }
-
-    .image img {
-        max-width: 100%; 
-    }
-}
-
 .btn:hover {
-    background-color: #00b8cc;
+    background-color: #0099aa;
 }
 
-/* Style pour la section À propos */
+/* Section À propos */
 #apropos {
     padding: 40px 20px;
     background-color: #fff;
 }
 
 .apropos-content {
-    display: flex; 
+    display: flex;
     align-items: center;
-    justify-content: space-between; 
-    max-width: 1200px; 
-    margin: 0 auto; 
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .apropos-texte {
-    flex: 1; 
-    padding-right: 40px; 
+    flex: 1;
+    padding-right: 40px;
 }
 
 .apropos-image {
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
 .apropos-image img {
-    max-width: 100%; 
-    height: auto; 
-    border-radius: 50%; 
-    border-color: #00b8cc;
-    border-style: ridge;
-  
+    max-width: 100%;
+    height: 300px;
+    border-radius: 50%;
+    border: 4px ridge #00b8cc;
 }
 
-/* Style pour le bouton */
-.btn {
-    display: inline-block;
-    background-color: #00b8cc;
-    color: #000;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #00b8cc;
-}
-
-/* Style pour les projets */
+/* Section Projets */
 .projets-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
@@ -231,32 +224,26 @@ section h2 {
     background-color: #333;
 }
 
-/* Style pour la section Compétences */
+/* Section Compétences */
 #competences {
     padding: 40px 20px;
     background-color: #fff;
 }
 
-#competences h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2em;
-}
-
 .skills-container {
-    display: flex; 
-    justify-content: space-between; 
-    max-width: 1200px; 
-    margin: 0 auto; 
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .soft-skills, .hard-skills {
-    flex: 1; 
-    padding: 0 20px; 
+    flex: 1;
+    padding: 0 20px;
 }
 
 .skill {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 .skill h4 {
@@ -275,26 +262,26 @@ section h2 {
     height: 100%;
 }
 
-/* Style pour le bouton "Voir" */
+/* Bouton "Voir" */
 .voir-competences {
-    text-align: center; 
-    margin-top: 20px; 
+    text-align: center;
+    margin-top: 20px;
 }
 
 .voir-competences .btn {
-    background-color: #00b8cc; 
-    color: #000; 
-    padding: 10px 20px; 
-    text-decoration: none; 
-    border-radius: 5px; 
-    transition: background-color 0.3s ease; 
+    background-color: #00b8cc;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .voir-competences .btn:hover {
-    background-color: #00b8cc; 
+    background-color: #0099aa;
 }
 
-/* Style pour le contact */
+/* Section Contact */
 #contact {
     text-align: center;
 }
@@ -324,31 +311,27 @@ section h2 {
 }
 
 #contact button:hover {
-    background-color: #00b8cc;
+    background-color: #0099aa;
 }
 
-
-
+/* Footer */
 footer {
-    background-color: #000; 
-    color: #fff; 
-    text-align: center; 
-    padding: 20px; 
-    position: fixed; 
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
     left: 0;
     bottom: 0;
-    width: 100%; 
+    width: 100%;
     z-index: 1000;
-}
-body {
-    margin-bottom: 80px;
 }
 
 footer p {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    margin: 0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
 }
 
 footer span {
@@ -360,25 +343,64 @@ footer span:hover {
     text-decoration: underline;
 }
 
-/* Style pour le bouton "Remonter en haut" */
+/* Bouton "Remonter en haut" */
 #back-to-top {
-    display: none; 
-    position: fixed; 
-    bottom: 20px; 
+    display: none;
+    position: fixed;
+    bottom: 80px;
     right: 20px;
-    z-index: 1000; 
-    background-color: #00b8cc; 
-    color: #000; 
-    border: none; 
-    border-radius: 50%; 
-    width: 50px; 
-    height: 50px; 
-    font-size: 24px; 
-    cursor: pointer; 
+    z-index: 1000;
+    background-color: #00b8cc;
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease; 
+    transition: background-color 0.3s ease;
 }
 
 #back-to-top:hover {
-    background-color: #00b8cc; 
+    background-color: #0099aa;
+}
+
+/* Styles pour les écrans de moins de 768px (mobiles) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .presentation {
+        flex-direction: column;
+    }
+
+    .apropos-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .apropos-texte {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .projets-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .soft-skills, .hard-skills {
+        padding: 0;
+    }
+
+    footer p {
+        flex-direction: column;
+        gap: 10px;
+    }
 }

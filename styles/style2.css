@@ -13,11 +13,6 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }  
 
 /* Style pour la navigation */
 nav {
@@ -139,22 +134,18 @@ table a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        text-align: center;
+    .presentation {
+        flex-direction: column; 
+        text-align: center; 
     }
 
-    nav ul {
-        margin-top: 10px;
+    .texte {
+        padding-right: 0; 
+        margin-bottom: 20px; 
     }
 
-    table {
-        display: block;
-        overflow-x: auto;
-    }
-
-    .galerie {
-        grid-template-columns: 1fr;
+    .image img {
+        max-width: 100%; 
     }
 }
 
